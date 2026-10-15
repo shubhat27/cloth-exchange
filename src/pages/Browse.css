@@ -1,0 +1,362 @@
+/* Main Browse Page */
+.browse-page {
+  min-height: 100vh;
+  background: #f8faf9;
+  color: #1f2937;
+  padding-bottom: 60px;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+.browse-header {
+  padding: 65px 20px 45px;
+  text-align: center;
+  background: linear-gradient(135deg, #e5f5ed, #f7fbf8);
+}
+
+.browse-eyebrow {
+  color: #16845b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.browse-header h1 {
+  margin: 12px 0;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.browse-header > p:not(.browse-eyebrow) {
+  color: #64748b;
+  margin: 0 auto 25px;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* Search Bar */
+.browse-search {
+  display: block;
+  width: min(100%, 600px);
+  margin: 0 auto;
+  padding: 15px 18px;
+  border: 1px solid #d5ded8;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.browse-search:focus {
+  border-color: #16845b;
+  box-shadow: 0 0 0 3px #16845b20;
+}
+
+/* Main Content */
+.browse-content {
+  width: min(1200px, 92%);
+  margin: 40px auto;
+}
+
+.browse-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.browse-section-heading h2 {
+  margin: 0 0 7px;
+  font-size: 27px;
+}
+
+.browse-section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.category-button {
+  padding: 10px 17px;
+  border: 1px solid #dce5df;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #475569;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.category-button:hover,
+.category-button.active {
+  color: #ffffff;
+  background: #16845b;
+  border-color: #16845b;
+}
+
+/* Clothing Grid */
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Clothing Card */
+.clothing-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e7ece8;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px #172b1d08;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clothing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px #172b1d12;
+}
+
+/* Clothing Image */
+.clothing-image-wrapper {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+  background: #edf2ee;
+}
+
+.clothing-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.clothing-card:hover .clothing-image {
+  transform: scale(1.04);
+}
+
+/* Condition Badge */
+.condition-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #16845b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Card Details */
+.clothing-card-body {
+  padding: 18px;
+}
+
+.clothing-category {
+  color: #16845b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.clothing-card-body h3 {
+  margin: 8px 0 12px;
+  font-size: 19px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.clothing-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.clothing-description {
+  min-height: 42px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 14px 0;
+}
+
+/* Request Swap Button */
+.swap-button,
+.cancel-button {
+  border: none;
+  border-radius: 9px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.swap-button {
+  color: #ffffff;
+  background: #16845b;
+}
+
+.swap-button:hover {
+  background: #116b49;
+}
+
+.swap-button:focus-visible,
+.cancel-button:focus-visible,
+.category-button:focus-visible {
+  outline: 3px solid #79c9a5;
+  outline-offset: 3px;
+}
+
+.clothing-card-body > .swap-button {
+  width: 100%;
+}
+
+/* Empty Search Results */
+.no-clothes {
+  padding: 55px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e7ece8;
+  border-radius: 16px;
+}
+
+.no-clothes h3 {
+  margin-top: 0;
+}
+
+.no-clothes p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* Swap Request Modal */
+.swap-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(15 23 42 / 55%);
+}
+
+.swap-modal {
+  position: relative;
+  width: min(100%, 460px);
+  padding: 30px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px #0002;
+}
+
+.swap-modal h2 {
+  margin: 12px 0;
+  color: #1f2937;
+}
+
+.swap-modal > p {
+  line-height: 1.7;
+}
+
+.swap-modal-note {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f1f5f3;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.swap-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.cancel-button {
+  background: #edf2ef;
+  color: #334155;
+}
+
+.cancel-button:hover {
+  background: #dfe7e1;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .clothing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clothing-image-wrapper {
+    height: 240px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  .browse-header {
+    padding: 45px 16px 35px;
+  }
+
+  .browse-content {
+    width: 92%;
+    margin: 28px auto;
+  }
+
+  .clothing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clothing-image-wrapper {
+    height: 300px;
+  }
+
+  .browse-section-heading h2 {
+    font-size: 23px;
+  }
+
+  .category-filters {
+    gap: 8px;
+  }
+
+  .category-button {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .swap-modal {
+    padding: 25px 20px;
+  }
+}
+

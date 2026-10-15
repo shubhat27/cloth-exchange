@@ -1,0 +1,70 @@
+.list-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: #f7f8f6;
+}
+
+.list-container {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.list-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.list-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.list-container label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.list-container input,
+.list-container select,
+.list-container textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.list-container input:focus,
+.list-container select:focus,
+.list-container textarea:focus {
+  outline: none;
+  border-color: #2f6f4e;
+}
+
+.list-container textarea {
+  resize: vertical;
+}
+
+.list-container button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #2f6f4e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.list-container button:hover {
+  background: #24563c;
+}
